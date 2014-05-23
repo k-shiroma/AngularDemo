@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="injectCss.js"></script>
+<script src="MyController.js"></script>
+<!--
+<style>
+  table,tr,td {
+    margin: 0px;
+    badding: 0px;
+    border-collapse:collapse;
+  }
+  td {
+    border: solid 1px steelblue;
+  }
+  thead td {
+    background-color: steelblue;
+    border: solid 1px white;
+    color: white;
+  }
+</style>-->
+<title></title>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="MyController">
+  {{1+2}}
+  <table>
+    <thead>
+      <tr>
+        <td>グループ</td>
+        <td>区分</td>
+        <td>名前</td>
+        <td>費用</td>
+        <td>時間(分)</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" ng-model="search.group" placeholder="条件入力"/></td>
+        <td><input type="text" ng-model="search.kbn" placeholder="条件入力"/></td>
+        <td><input type="text" ng-model="search.name" placeholder="条件入力"/></td>
+        <td><input type="text" ng-model="search.cost" placeholder="条件入力"/></td>
+        <td><input type="text" ng-model="search.costTime" placeholder="条件入力"/></td>
+      </tr>
+      <tr ng-repeat="d in myData | filter: search">
+        <td>{{d.group}}</td>
+        <td>{{d.kbn}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.cost}}</td>
+        <td>{{d.costTime}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

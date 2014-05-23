@@ -1,0 +1,13 @@
+﻿table,tr,td {
+  margin: 0px;
+  badding: 0px;
+  border-collapse:collapse;
+}
+td {
+  border: solid 1px steelblue;
+}
+thead td {
+  background-color: steelblue;
+  border: solid 1px white;
+  color: white;
+}
