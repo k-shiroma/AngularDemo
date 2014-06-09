@@ -1,0 +1,9 @@
+<script src="http://code.angularjs.org/1.0.5/angular.js"></script>
+
+<div ng-app>
+    <p>Id  : <input type=text style="ime-mode: disabled;" ng-model="id" ng-pattern="/^[a-zA-Z0-9]*$/"></p>
+    <p>Name: <input type=text style="ime-mode: active;" ng-model="name"></p>
+    <br>
+    <p>Current user's id  : {{id}}</p>
+    <p>Current user's name: {{name}}</p>
+</div>
